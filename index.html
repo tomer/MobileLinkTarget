@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Link hover demo</title>
+<style>
+a:hover {
+	background: rgba(255,0,0,0.2);
+}
+a:hover::before {
+	content: attr(href);
+	padding: 2px;
+	position: relative;
+	top: 2em;
+	border: 1px solid black;
+	border-radius: 0.5em;
+	background: white;
+	box-shadow: 2px 3px 2px 0 silver;
+	font-weight: bolder;
+	text-decoration: none;
+	opacity: 1;
+	animation: 0.5s ease-in 2s 1 backwards hover;		
+}
+@keyframes hover {
+	from { opacity: 0.05; }
+	to   { opacity: 1; }
+}
+</style>
+	</head>
+	<body>
+		<ul>
+			<li><a href="http://mozilla.org">moz://a</a></li>
+			<li><a href="https://example.net">example</a></li>
+		</ul>
+	</body>
+</html>
