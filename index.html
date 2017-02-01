@@ -11,8 +11,9 @@ a:hover {
 a:hover::before {
 	content: attr(href);
 	padding: 2px;
-	position: relative;
-	top: 2em;
+	position: fixed;
+	bottom: 2em;
+	left: 1em; right: 1em;
 	border: 1px solid black;
 	border-radius: 0.5em;
 	background: white;
@@ -32,6 +33,7 @@ a:hover::before {
 		<ul>
 			<li><a href="http://mozilla.org">moz://a</a></li>
 			<li><a href="https://example.net">example</a></li>
+			<li><a href="https://github.com/tomer/MobileLinkTarget">Fork me on Github</a></li>
 		</ul>
 	</body>
 </html>
